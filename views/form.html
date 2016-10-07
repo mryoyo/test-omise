@@ -1,0 +1,35 @@
+<head>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.omise.co/omise.js"></script>
+  <script src="/static/form.js"></script>
+</head>
+
+<body>
+  <h3>Hello A-Insure</h3>
+  <form action="/submit" method="POST">
+
+    <div id="token_errors"></div>
+
+    <input type="hidden" name="omise_token">
+
+    <div>
+      Name<br>
+      <input type="text" data-omise="holder_name">
+    </div>
+    <div>
+      Number<br>
+      <input type="text" data-omise="number">
+    </div>
+    <div>
+      Date<br>
+      <input type="text" data-omise="expiration_month" size="4"> /
+      <input type="text" data-omise="expiration_year" size="8">
+    </div>
+    <div>
+      Security Code<br>
+      <input type="text" data-omise="security_code" size="8">
+    </div>
+
+    <input type="submit" id="create_token">
+  </form>
+</body>
